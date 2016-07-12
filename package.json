@@ -1,0 +1,31 @@
+{
+  "name": "instagallery",
+  "version": "0.1.0",
+  "description": "Frontend Dev Challenge",
+  "main": "server/app.js",
+  "scripts": {
+    "start": "node server/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/echooocc/instagallery"
+  },
+  "author": "Echo Yu",
+  "license": "None",
+  "private": true,
+  "dependencies": {
+    "angular2": "2.0.0-beta.13",
+    "es6-shim": "0.35.0",
+    "express": "4.13.4",
+    "reflect-metadata": "0.1.2",
+    "request": "2.70.0",
+    "rxjs": "5.0.0-beta.2",
+    "systemjs": "0.19.25",
+    "zone.js": "0.6.9"
+  },
+  "devDependencies": {
+    "commonjs": "0.0.1",
+    "typescript": "1.8.9",
+    "typings": "0.7.12"
+  }
+}
