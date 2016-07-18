@@ -2,7 +2,7 @@
     <div class="weather-container" [class.reset]="isClick">
     <h1>{{title}}</h1>
     <input type="text" name="city" placeholder="input a city" [(ngModel)]="city">
-    <button class="button" (click)="search(city); isClick = !isClick">Search</button>
+    <button class="button" (click)="search(city); isClick = !isClick; isClicked=true" [disabled]="isClicked">Search</button>
     <div *ngIf="serviceError" class="wrapper">Oops! Our service is taking a break :( </div>
     <h5>{{location}}</h5>
     <div class="forecast-wrapper">
