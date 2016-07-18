@@ -4,7 +4,10 @@
   "description": "Frontend Dev Challenge",
   "main": "server/app.js",
   "scripts": {
-    "start": "node server/app.js"
+    "start": "node server/app.js",
+    "build": "npm run build-css && npm run build-js",
+    "build-css": "cleancss -o app/main-min.css app/styles/main.css",
+    "build-js": "tsc --rootDir app/scripts --outDir app/"
   },
   "repository": {
     "type": "git",
@@ -14,18 +17,18 @@
   "license": "None",
   "private": true,
   "dependencies": {
-    "angular2": "2.0.0-beta.13",
-    "es6-shim": "0.35.0",
-    "express": "4.13.4",
+    "angular2": "2.0.0-beta.17",
+    "es6-shim": "0.35.1",
+    "express": "4.14.0",
     "reflect-metadata": "0.1.2",
-    "request": "2.70.0",
-    "rxjs": "5.0.0-beta.2",
-    "systemjs": "0.19.25",
-    "zone.js": "0.6.9"
+    "request": "2.73.0",
+    "rxjs": "5.0.0-beta.6",
+    "systemjs": "0.19.31",
+    "zone.js": "0.6.12"
   },
   "devDependencies": {
+    "clean-css": "^3.4.18",
     "commonjs": "0.0.1",
-    "typescript": "1.8.9",
-    "typings": "0.7.12"
+    "typescript": "1.8.10"
   }
 }

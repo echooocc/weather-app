@@ -10,13 +10,11 @@ app.use(express.static('./app'));
 app.use(express.static('./node_modules/'));
 
 app.get('/city/:city', function(req, res) {
-  // Instagram api
+
   var token = 'b98c4ad6dd908a7c189365947661a7ab';
   var cityUrl = 'http://api.openweathermap.org/data/2.5/forecast/city?q=';
   var url = cityUrl + req.params.city + '&APPID=' + token + '&cnt=12';
 
-  // Insert code here to call Instagram and return photos.
-  // debug('Requesting data with hashtag', req.params.hashtag);
   request({
     url: url,
     json: true
