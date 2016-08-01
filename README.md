@@ -13,7 +13,8 @@ demo page https://weatherappdemo.herokuapp.com
 Make sure you have `node` and `npm` installed.  
   
 ```
-npm run start
+1. npm install
+2. npm run start
 ```
 
 
