@@ -15,6 +15,10 @@ Make sure you have `node` and `npm` installed.
 ```
 1. npm install
 2. npm run start
+3. check http://localhost:3000/ for angular2 demo
+    http://localhost:3000/react.html for react demo
 ```
+
+
 
 
