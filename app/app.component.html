@@ -1,21 +1,22 @@
 <div class="wrapper">
     <div class="weather-container" [class.reset]="isClick">
-    <h1>{{title}}</h1>
-    <input type="text" name="city" placeholder="input a city" [(ngModel)]="city">
-    <button class="button" (click)="search(city); isClick = !isClick; isClicked=true" [disabled]="isClicked">Search</button>
-    <div *ngIf="serviceError" class="wrapper">Oops! Our service is taking a break :( </div>
-    <h5>{{location}}</h5>
-    <div class="forecast-wrapper">
-          <div *ngFor="#weather of weathers" class="forecast">
-               <div *ngFor="#details of weather.weather" class="forecast-list">
-                   <img src="http://openweathermap.org/img/w/{{details.icon}}.png" class="animate">  
-                   <h3>{{weather.main.temp-272.15 | number}}</h3>
-                   <span>{{details.description}}</span><br>
-                   <span class="date">{{weather.dt_txt}}</span>
+        <h1>{{title}}</h1>
+        <input type="text" name="city" placeholder="input a city" [(ngModel)]="city">
+        <button class="button" (click)="search(city); isClick = !isClick; isClicked=true" [disabled]="isClicked">Search</button>
+        <div *ngIf="serviceError" class="wrapper">Oops! Our service is taking a break :( </div>
+        <h5>{{location}}</h5>
+        <div class="forecast-wrapper">
+            <div *ngFor="#weather of weathers" class="forecast">
+                <div *ngFor="#details of weather.weather" class="forecast-list">
+                    <img src="http://openweathermap.org/img/w/{{details.icon}}.png" class="animate">
+                    <h3>{{weather.main.temp-272.15 | number}}</h3>
+                    <span>{{details.description}}</span><br>
+                    <span class="date">{{weather.dt_txt}}</span>
                 </div>
+            </div>
         </div>
     </div>
- </div>
- <footer [class.reset]="isClick">
-    <p>design&nbsp;<a href="http://echoyu.com">&#10084;&nbsp;</a>with Echo</p>
- </footer>
+    <footer [class.reset]="isClick">
+        <p>design&nbsp;<a href="http://echoyu.com">&#10084;&nbsp;</a>with Echo</p>
+    </footer>
+</div>
